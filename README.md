@@ -4,20 +4,20 @@ This is a C++ program designed to optimize the distribution of tasks across a se
 
 This problem is a classic application of the **Binary Search on Answer** pattern (similar to the Book Allocation Problem).
 
-## 🚀 Features
+##  Features
 - **Optimized Performance**: Utilizes Binary Search to efficiently find the optimal maximum load in `O(N log(Sum - Max))` time complexity.
 - **Large Input Support**: Implemented using `long long` to prevent integer overflow when dealing with massive task loads.
 - **Fast I/O**: Incorporates C++ fast I/O configurations for significant performance boosts during standard input and output.
 - **Detailed Strategy Output**: Reconstructs and clearly displays the exact assignment of tasks to each server.
 
-## 🧠 How It Works
+##  How It Works
 
 The algorithm uses binary search over the possible range of "maximum loads":
 1. **Low Bound**: The single largest task in the list (since a server must be able to handle at least the largest single task).
 2. **High Bound**: The sum of all tasks (the worst-case scenario where 1 server handles everything).
 3. **Validation (`isPossible` function)**: For a guessed maximum load (`mid`), it sequentially assigns tasks to servers. If adding a task exceeds `mid`, a new server is allocated. If the required servers exceed the available servers, the guessed load is too small.
 
-## 💻 How to Run
+##  How to Run
 
 ### Prerequisites
 - A C++ compiler (like GCC or Clang)
@@ -34,7 +34,7 @@ Run the compiled executable:
 ./CloudResourceAllocation
 ```
 
-## 📊 Example Usage
+##  Example Usage
 
 **Input:**
 ```text
@@ -62,6 +62,6 @@ Outcome: Efficient scaling and reduced latency achieved!
 ============================================
 ```
 
-## ⏱️ Complexity
+## Time Complexity
 - **Time Complexity:** `O(N log(S - M))` where `N` is the number of tasks, `S` is the sum of all tasks, and `M` is the maximum single task.
 - **Space Complexity:** `O(N)` to store the tasks and the final reconstructed allocation strategy.
